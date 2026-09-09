@@ -1,0 +1,236 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(42, 144, 240);
+    font-family: Arial, sans-serif;
+}
+
+
+.Todo {
+    width: 95%;
+    margin: auto;
+}
+
+/*Titulos*/
+
+.Necesidades h1,
+.niños h1 {
+    text-align: center;
+    font-size: 4rem;
+    margin: 4rem 0;
+    letter-spacing: 3px;
+}
+
+/*COLLAGE*/
+
+.imagenes {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 12rem;
+
+    gap: 1.2rem;
+
+    width: 100%;
+}
+
+/* Todas las imágenes */
+
+.imagenes img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+
+    transition: 0.3s;
+}
+
+/* Efecto al pasar el mouse */
+
+.imagenes img:hover {
+    transform: scale(1.03) rotate(1deg);
+    z-index: 5;
+}
+
+/*TAMAÑOS*/
+
+.imagenes img:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.imagenes img:nth-child(2) {
+    grid-column: span 1;
+    grid-row: span 3;
+}
+
+.imagenes img:nth-child(3) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.imagenes img:nth-child(4) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.imagenes img:nth-child(5) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.imagenes img:nth-child(6) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.imagenes img:nth-child(7) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.imagenes img:nth-child(8) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.imagenes img:nth-child(9) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.imagenes img:nth-child(10) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.imagenes img:nth-child(11) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.imagenes img:nth-child(12) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+
+/*SECCION TABITHA*/
+
+.niños {
+    margin-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+/*COLLAGE TABITHA*/
+
+.imagenes2 {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 15rem;
+
+    gap: 1.2rem;
+
+    width: 100%;
+}
+
+/* Imágenes */
+
+.imagenes2 img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+
+    transition: 0.3s;
+}
+
+/* Hover */
+
+.imagenes2 img:hover {
+    transform: scale(1.04) rotate(-1deg);
+    z-index: 5;
+}
+
+/*TABITHA - DISTRIBUCION*/
+
+.imagenes2 img:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.imagenes2 img:nth-child(2) {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+.imagenes2 img:nth-child(3) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+
+.imagenes2 img:nth-child(4) {
+    grid-column: span 2;
+    grid-row: span 5;
+}
+
+.imagenes2 img:nth-child(5) {
+    grid-column: span 2;
+    grid-row: span 5;
+
+    transform: rotate(-1deg);
+}
+
+
+@media (max-width: 900px) {
+
+    .imagenes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .imagenes2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Necesidades h1,
+    .niños h1 {
+        font-size: 3rem;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .imagenes,
+    .imagenes2 {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 20rem;
+    }
+
+    .imagenes img,
+    .imagenes2 img {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+    }
+
+    .Necesidades h1,
+    .niños h1 {
+        font-size: 2rem;
+    }
+}
+
